@@ -20,16 +20,24 @@
 
 export default {
   data() {
-    return{
-    loginstatus: ''
-    }
   },
 
   methods:{
   fnLogout() {
-    localStorage.removeItem('authorization')
-    localStorage.removeItem('user')
-    alert("로그아웃 되었습니다")
+    this.$axios.post(this.$serverUrl + '/logout', {},{
+      headers: {
+        "Authorization": localStorage.getItem("authorization")
+      }
+    })
+        .then(() => {
+          alert("로그아웃 되었습니다")
+          localStorage.removeItem('authorization')
+          localStorage.removeItem('user')
+          this.$router.replace('/login');
+        }).catch((err) => {
+      console.log(err);
+      alert('ERR발생')
+    })
   },
   }
 }
