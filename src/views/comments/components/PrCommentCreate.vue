@@ -1,7 +1,7 @@
 <template>
   <div class="commentItem">
     <textarea
-        placeholder="댓글을 입력하세요"
+        placeholder="20자 이내로 댓글을 입력하세요"
         v-model="comment"
     ></textarea>
     <button @click="createComment">댓글달기</button>

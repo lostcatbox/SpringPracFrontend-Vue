@@ -18,7 +18,7 @@
         <td>{{ row.id }}</td>
         <td><a v-on:click="fnView(`${row.id}`)">{{ row.postName }}</a></td>
         <td>{{ row.content }}</td>
-        <td>{{ row.user.username}}</td>
+        <td>{{ row.user.email}}</td>
         <td>{{ row.createdDate }}</td>
       </tr>
       </tbody>

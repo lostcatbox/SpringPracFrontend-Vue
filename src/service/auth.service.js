@@ -6,10 +6,10 @@ class AuthService {
     /**
      * 로그인
      */
-    login(username, password) {
+    login(email, password) {
         return axios.post('/login',
             {
-            username: username,
+            email: email,
             password: password
         })
             .then(response => {
@@ -31,7 +31,7 @@ class AuthService {
         let user = JSON.parse(localStorage.getItem('user'))
 
         let data = {
-            username: user.username
+            email: user.email
         }
 
         return axios.post(API_URL + 'signout', JSON.stringify(data), {

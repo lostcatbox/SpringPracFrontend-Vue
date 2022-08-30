@@ -7,10 +7,10 @@
     </div>
     <div class="board-contents">
       <h2>{{author}}</h2>
-      <input type="text" v-model="postName" class="w3-input w3-border" placeholder="제목을 입력해주세요.">
+      <input type="text" v-model="postName" class="w3-input w3-border" placeholder="10자 이내로 제목을 입력해주세요.">
     </div>
     <div class="board-contents">
-      <textarea id="" cols="30" rows="10" v-model="content" class="w3-input w3-border" style="resize: none;">
+      <textarea id="" cols="30" rows="10" v-model="content" class="w3-input w3-border" style="resize: none;" placeholder="200자 이내로 내용을 입력해주세요.">
       </textarea>
     </div>
     <div class="common-buttons">

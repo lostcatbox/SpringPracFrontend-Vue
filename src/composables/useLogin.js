@@ -6,14 +6,14 @@ import store from '../store/index';
 const error = ref(null)
 const isPending = ref(false)
 
-const login = async (username, password) => {
+const login = async (email, password) => {
 
     error.value = null
     isPending.value = true
 
 
     try {
-        await store.dispatch('auth/login', {username, password})
+        await store.dispatch('auth/login', {email, password})
 
         error.value = null
         isPending.value = false

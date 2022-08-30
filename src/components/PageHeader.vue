@@ -24,7 +24,7 @@ export default {
 
   methods:{
   fnLogout() {
-    this.$axios.post(this.$serverUrl + '/logout', {},{
+    this.$axios.post(this.$serverUrl + '/logout',{},{
       headers: {
         "Authorization": localStorage.getItem("authorization")
       }
